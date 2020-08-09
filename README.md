@@ -21,11 +21,12 @@ which indicates health of the application and returns a valid json with the foll
 3. What other information would you add to health endpoint json object in step 2? Explain what would be the use case
 for that extra information?
 4. Create a docker file to build, package, deploy, and run this application locally with Docker.    
-5. How would you automate the build/test/deploy process for this application? 
+5. How would you automate the build/test/deploy process for this application? (verba answer is enough. installation of CICD is bonus, not required)
    - What branching strategy would you use for development?
    - What CICD tool/service would you use?
    - What stages would you have in the CICD pipeline?
    - What would be the purpose of each stage in CICD pipeline
+  
 
 
 Your solution should include a README explaining how to build and run the application with Docker.
