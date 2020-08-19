@@ -29,4 +29,6 @@ for that extra information?
   
 
 
-Your solution should include a README explaining how to build and run the application with Docker.
+6. Your solution should include a README explaining how to build and run the application with Docker. We will follow the steps you provide in readme file and execute it to verify.
+
+Submission: Please submit github repository url for your solution.
