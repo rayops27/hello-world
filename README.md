@@ -32,6 +32,6 @@ Open http://localhost:8080 in browser to say hello!! <br /> <br />
      Run docker container <br />
          **docker run -d my-hello-world -p 8080:8080**
      
-    Open http://localhost:8080 in browser to say hello!! <br /> <br />
+    Open http://localhost:8080 in browser to say hello!!
      
      
