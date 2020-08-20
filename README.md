@@ -1,5 +1,5 @@
 # Hello World
-prerequisite
+**prerequisite**
 
 Install docker <br />
 git
@@ -7,9 +7,9 @@ git
 
  1. Clone repo and run command to run hello-world api  
  Build docker image <br />
-    docker build -t my-hello-world . <br /> <br />
+    **docker build -t my-hello-world .** <br /> <br />
  Run docker container <br />
-     docker run -d my-hello-world -p 8080:8080
+     **docker run -d my-hello-world -p 8080:8080**
  
 Open http://localhost:8080 in browser to say hello!! <br /> <br />
  
@@ -28,9 +28,9 @@ Open http://localhost:8080 in browser to say hello!! <br /> <br />
     d. Purpose of each stage of build to compile, package and deploy app which refines quality of app/service
     
  6.  Build docker image <br />
-        docker build -t my-hello-world . <br /> <br />
+        **docker build -t my-hello-world .** <br /> <br />
      Run docker container <br />
-         docker run -d my-hello-world -p 8080:8080
+         **docker run -d my-hello-world -p 8080:8080**
      
     Open http://localhost:8080 in browser to say hello!! <br /> <br />
      
