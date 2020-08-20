@@ -1,34 +1,37 @@
 # Hello World
+prerequisite
 
-Using your favorite language (Go, Python, Java, Scala, Bash, etc.), create a hello world web application API
-that listens on port 8080 and greets a user with `Hello!` and exposes a health status endpoint.
-
-1. Application url should return a greeting such as `Hello!` as json or plain text (ex: when you open a browser and 
-navigate to http://localhost:8080, it should return `Hello!` plain text.)
-2. Application should provide a health endpoint (http://localhost:8080/healthz) that returns HTTP status (200 OK)
-which indicates health of the application and returns a valid json with the following information:
-   - `status`: status of the app: online, success, OK, error, etc.  
-   - `version`: running application version (ex: 0.0.1)  
-   - `uptime`: time duration or time stamp since the app is running (ex: running since YYYY-MM-DD hh:mm:ss)
-  Example: When you open a browser and navigate to http://localhost:8080/healthz it should return:
-  ```
-  {
-    "status": "OK",
-    "version": "0.0.1",
-    "uptime": "up since 2020-08-04 08:00:05"
-  }
-  ```
-3. What other information would you add to health endpoint json object in step 2? Explain what would be the use case
-for that extra information?
-4. Create a docker file to build, package, deploy, and run this application locally with Docker.    
-5. How would you automate the build/test/deploy process for this application? (a verbal answer is enough. installation of CICD is bonus, not required)
-   - What branching strategy would you use for development?
-   - What CICD tool/service would you use?
-   - What stages would you have in the CICD pipeline?
-   - What would be the purpose of each stage in CICD pipeline
-  
+Install docker <br />
+git
 
 
-6. Your solution should include a README explaining how to build and run the application with Docker. We will follow the steps you provide in readme file and execute it to verify.
-
-NOTE: Please submit github repository url for your solution.
+ 1. Clone repo and run command to run hello-world api  
+ Build docker image <br />
+    docker build -t my-hello-world . <br /> <br />
+ Run docker container <br />
+     docker run -d my-hello-world -p 8080:8080
+ 
+Open http://localhost:8080 in browser to say hello!! <br /> <br />
+ 
+ 
+ 2. Application will print HTTPS status (http://localhost:8080/healthz) <br />
+ 
+ 3. we can get extra information like CPU, Memory, Disk usage of system 
+ 4. Docker file created which build images and deploy api app
+ 5. We can automate build/test/deploy api app using Version control, Jenkins, Artifactoyr/Registry to store app versions
+   We need to can write jenkins declarative pipeline with build stages build, test, deploy as example in Jenkins file
+   a. We can use branch model Master, develop, release-2020-08-24, bug-fix, 
+     Where individual contributors submit pull request to develop branch and runs builds and unit level testing and deployment to testing env once build sucess deploy promot build to higher environments as upstream jenkins jobs
+     and we can cut relase branch once changes freeze for production deployment  with release cadence
+    b. I used VCS-GIT(Gitlab, Github), Jenkins, Artifactory, Ansible
+    c. We would have Build,Test-integration and quality,deployment, sanity checks
+    d. Purpose of each stage of build to compile, package and deploy app which refines quality of app/service
+    
+ 6.  Build docker image <br />
+        docker build -t my-hello-world . <br /> <br />
+     Run docker container <br />
+         docker run -d my-hello-world -p 8080:8080
+     
+    Open http://localhost:8080 in browser to say hello!! <br /> <br />
+     
+     
